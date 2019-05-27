@@ -136,6 +136,10 @@ router.post('/login', function(req,res,next){
     })
 
 })
+router.get('/users', validateToken, function(req,res,next){
+    res.json(users)
+
+})
 router.get('/goals', validateToken, function(req,res,next){
     res.send(goals)
 })
